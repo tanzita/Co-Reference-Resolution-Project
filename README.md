@@ -1,5 +1,3 @@
-# Co-Reference-Resolution-Project
-
 Guideline to use the scripts
 
 This Read-Me file describes a step-by-step guideline to use the following six scripts-
