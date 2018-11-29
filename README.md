@@ -1,6 +1,41 @@
 # Co-Reference Resolution Project
 
-Guideline to use the scripts
+In this exercise I tried to implement a machine learning classifier based on the methods described in Soon et al. (2001: A Machine Learning Approach to Coreference Resolution of Noun Phrases). I used OntoNotes, CoNLL-2012 data as training and test data. I used Support Vector Machine (SVM) classifier using scikit-learn toolkit in python to predict the output. I chose SVM because Decision Tree classifier has a tendency to become over-fitted easily and SVM is quite effective in binary boundary detection. 
+
+## Determination of Markables
+
+I chose the following items as the components for each NP phrases in the input data (both test and training data),
+
+* Words
+* Parts of Speech
+* Name-Entity Values (‘null’ if not present)
+* Coreference Chain Number (‘null’ if not present)
+* Sentence Number
+
+Also each begin statement of a file segment is kept for future calculation.
+
+The files in where the markables are stored are named as follows,
+
+* training_markables
+* test_markables
+
+Each line in the file represents a NP phrases except the file boundary lines.  For example a file boundary line,
+
+#begin document (wb/eng/00/eng_0009); part 000
+
+In the corpus all the name-entity valued word segments were inside the related noun phrase. So I did not check the ‘Nested noun phrase extraction’ because it has already been done.
+
+As I have considered every noun phrases (denoted as NP) in our code (markable_extraction.py) so I am sure that the precision and recall will be 100%.
+
+## Evaluation
+
+I have evaluated the predicted data using sklearn.metrics module and obtained the following results 
+* Accuracy = 96.1963771458%
+* Precision = 84.0616966581%
+* Recall = 28.7671232877%
+* F1-Score = 42.8651685393%
+
+## Guideline to use the scripts
 
 This Read-Me file describes a step-by-step guideline to use the following six scripts-
 
