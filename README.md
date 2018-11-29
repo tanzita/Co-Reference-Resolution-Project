@@ -9,8 +9,6 @@ This Read-Me file describes a step-by-step guideline to use the following six sc
 * run_steps_big_data.sh
 * svm-classification.py
 
-These scripts were created by Tanzia Haque Tanzi (3144251) & Mahbub Ul Alam (3144196) for the project work for the ‘Co-Reference Resolution’ in SS-2016 (MSc. In CL at IMS). For details about the work, scripts and output please see the ‘Project Report’ document.
-
 1. Please keep all the scripts in a same directory and do not change their names. 
 
 
